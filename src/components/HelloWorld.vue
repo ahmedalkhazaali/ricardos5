@@ -1,98 +1,121 @@
 <template>
-  <meta />
-  <div class="container">
-    <img
-      src="https://pizzapanorama.ca/images/adobestock_266429012.jpg?crc=125304778"
-    />
-    <div class="first">
-      <h1 class="title"><br /><br />RICARDOS PIZZA</h1>
-      <h1 class="ttitle">IS THE BEST IN TOWN</h1>
-      <p>
-        365 days a year, Ricardo's Pizza Restaurant shines with unwavering
-        commitment. We are dedicated to excellence, sourcing only the
-        highest-quality ingredients to create an exceptional pizza experience.
-        Our customers enthusiastically agree: we serve the city's most
-        outstanding pizza.<br /><br />
-        <br />
-      </p>
-    </div>
-    <div class="second">
-      <h1 class="pride"><br />WE PRIDE OURSELVES ON QUALITY <br />AND TASTE</h1>
-      <p class="values">
-        Ricardo's Pizza Restaurant lives by three core values: Craftsmanship,
-        Hospitality, and Sustainability. We're dedicated to crafting exceptional
-        pizzas, offering outstanding service, and practicing sustainability.
-        Your satisfaction is our top priority, and we eagerly anticipate serving
-        you while upholding these values.
-      </p>
-      <v-btn
-        variant="outlined"
-        style="
-          margin-left: 26.041%;
-          margin-top: 20px;
-          font-size: 20px;
-          background-color: orangered;
-          color: white;
-          border-radius: 3px;
-          border-color: rgb(0, 0, 0);
-        "
-        >View Menu</v-btn
+  <!---------------------------------Container -->
+  <div class="d-flex flex-column justify-center align-center">
+    <!-------------------------------------Banner image  -->
+    <v-img src="@/assets/about-banner.png" style="width: 100%" fixed />
+    <!--------------------------------------Intro   -->
+    <v-card
+      style="
+        width: 100%;
+        height: fit-content;
+        min-width: 1500px;
+        background-color: rgb(253, 134, 65);
+      "
+      class="d-flex flex-row align-center justify-center pa-10"
+    >
+      <div
+        class="d-flex flex-column align-center mt-16 mb-16"
+        style="width: 2700px; max-width: 90%"
       >
-      <v-btn
-        variant="outlined"
-        style="
-          font-size: 20px;
-          background-color: rgb(255, 255, 255);
-          color: rgb(0, 0, 0);
-          border-radius: 3px;
-          border-color: rgb(0, 0, 0);
-          margin-left: 5px;
-          margin-top: 20px;
-        "
-        >Contact Us</v-btn
+        <h1 class="title" style="font-size: 90px">RICARDOS PIZZA</h1>
+        <h1 class="ttitle">IS THE BEST IN TOWN</h1>
+        <p
+          style="width: 70%; max-width: 70%; text-align: center"
+          class="introBody"
+        >
+          365 days a year, Ricardo's Pizza Restaurant shines with unwavering
+          commitment. We are dedicated to excellence, sourcing only the
+          highest-quality ingredients to create an exceptional pizza experience.
+          Our customers enthusiastically agree: we serve the city's most
+          outstanding pizza!
+        </p>
+      </div>
+    </v-card>
+
+    <!----------------------------------------Main Body  -->
+    <div
+      class="second d-flex flex-row flex-wrap justify-center"
+      style="height: fit-content; width: 100%"
+      min-height="900px"
+    >
+      <div
+        class="mt-16 d-flex flex-row align-center justify-center"
+        style="width: 90%; max-width: 800px"
       >
+        <div style="width: 60%; max-width: 1440px" class="ma-12">
+          <h1 class="pride mb-3">
+            WE PRIDE OURSELVES ON QUALITY <br />AND TASTE
+          </h1>
+          <p class="values">
+            Ricardo's Pizza Restaurant lives by three core values:
+            Craftsmanship, Hospitality, and Sustainability. We're dedicated to
+            crafting exceptional pizzas, offering outstanding service, and
+            practicing sustainability. Your satisfaction is our top priority,
+            and we eagerly anticipate serving you while upholding these values.
+          </p>
+          <v-btn
+            variant="outlined"
+            style="
+              font-size: 20px;
+              background-color: orangered;
+              color: white;
+              border-radius: 3px;
+              border-color: rgb(0, 0, 0);
+            "
+            class="mr-5 mt-9"
+            >View Menu</v-btn
+          >
+          <v-btn
+            variant="outlined"
+            style="
+              font-size: 20px;
+              background-color: rgb(255, 255, 255);
+              color: rgb(0, 0, 0);
+              border-radius: 3px;
+              border-color: rgb(0, 0, 0);
+            "
+            class="mt-9"
+            >Contact Us</v-btn
+          >
+        </div>
+      </div>
+
       <v-card
         title="RICARDOS"
         style="
           background-color: rgb(255, 255, 255);
-          block-size: 450px;
           background-color: rgb(255, 255, 255);
           font-size: 50px;
           color: rgb(0, 0, 0);
           border-radius: 3px;
           border-color: rgb(0, 0, 0);
-          margin-right: 380px;
-          margin-left: 1070px;
-          margin-top: -350px;
+          width: 30%;
+          max-width: 400px;
+          height: 500px;
         "
         text="WE ARE LOOKING FORWARD TO SERVING YOU."
         variant="outlined"
+        class="pa-8 mr-10"
       >
+        <v-img class="menu mt-2 ml-16" src="@/assets/Ai.png" />
+
         <v-card-actions>
           <v-btn
             variant="outlined"
             style="
-              margin-left: 9px;
-              margin-top: -350px;
               background-color: rgb(255, 255, 255);
               color: rgb(0, 0, 0);
               border-radius: 3px;
               border-color: rgb(0, 0, 0);
               font-size: 17px;
             "
+            class="mt-4"
             >Locations</v-btn
           >
-          <img
-            class="menu"
-            src="https://static.vecteezy.com/system/resources/previews/024/725/117/original/pizza-pizza-pizza-with-transparent-background-ai-generated-free-png.png"
-          />
         </v-card-actions>
       </v-card>
-
-      <br /><br /><br /><br /><br />
     </div>
   </div>
-  <div class="logo"></div>
 </template>
 
 <style>
@@ -125,11 +148,7 @@ img {
   font-size: 40px;
   font-family: "Monospace", Monaco;
 }
-p {
-  margin-left: 500px;
-  margin-right: 500px;
-  margin-top: 20px;
-  text-align: justify;
+.introBody {
   color: rgb(255, 255, 255);
   font-size: 28px;
   font-family: "Monospace", Monaco;
@@ -143,24 +162,15 @@ p {
 }
 
 .values {
-  margin-right: 950px;
   font-size: 18px;
-  margin-top: 2px;
   color: #000;
-  text-shadow: -1px -1px 0 #ffffff, 0 -1px 0 #ffffff, 1px -1px 0 #ffffff,
-    1px 0 0 #ffffff, 1px 1px 0 #ffffff, 0 1px 0 #ffffff, -1px 1px 0 #ffffff,
-    -1px 0 0 #ffffff;
 }
 
 .pride {
-  margin-top: 0px;
-  margin-left: 495px;
-  margin-right: 500px;
   color: rgb(0, 0, 0);
   background-color: 218, 218, 218;
   font-size: 25px;
   font-family: "Monospace", Monaco;
-  text-align: justify;
 }
 
 .second {
@@ -173,9 +183,9 @@ p {
   background-color: rgb(255, 255, 255);
 }
 .menu {
-  width: 100%;
-  height: 100%;
+  width: 80%;
   margin-top: -50px;
+  justify-content: end;
 }
 .chicken {
   width: 100%;
