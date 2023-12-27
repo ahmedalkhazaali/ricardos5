@@ -32,22 +32,24 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref } from 'vue';
-
+import axios from 'axios';
 
 const name = ref('');
 const email = ref('');
 const message = ref('');
 const showThankYou = ref(false);
 
-
 const submitForm = async () => {
   try {
-    // Simulate form submission
-    // Add your actual form submission logic here
+    const response = await axios.post('http://localhost:3000/submit-form', {
+      name: name.value,
+      email: email.value,
+      message: message.value
+    });
 
+    console.log(response.data);  // Log the response from the server
 
     // Display the thank you message
     showThankYou.value = true;
@@ -56,6 +58,7 @@ const submitForm = async () => {
   }
 };
 </script>
+
 
 
 <style scoped>
@@ -133,29 +136,3 @@ const submitForm = async () => {
   color: darkorange;
 }
 </style>
-<script setup>
-import { ref } from 'vue';
-import axios from 'axios';
-
-const name = ref('');
-const email = ref('');
-const message = ref('');
-const showThankYou = ref(false);
-
-const submitForm = async () => {
-  try {
-    const response = await axios.post('http://localhost:3000/submit-form', {
-      name: name.value,
-      email: email.value,
-      message: message.value
-    });
-
-    console.log(response.data);  // Log the response from the server
-
-    // Display the thank you message
-    showThankYou.value = true;
-  } catch (error) {
-    console.error('Error during form submission:', error);
-  }
-};
-</script>
