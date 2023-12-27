@@ -53,30 +53,35 @@
             practicing sustainability. Your satisfaction is our top priority,
             and we eagerly anticipate serving you while upholding these values.
           </p>
-          <v-btn
-            variant="outlined"
-            style="
-              font-size: 20px;
-              background-color: orangered;
-              color: white;
-              border-radius: 3px;
-              border-color: rgb(0, 0, 0);
-            "
-            class="mr-5 mt-9"
-            >View Menu</v-btn
-          >
-          <v-btn
-            variant="outlined"
-            style="
-              font-size: 20px;
-              background-color: rgb(255, 255, 255);
-              color: rgb(0, 0, 0);
-              border-radius: 3px;
-              border-color: rgb(0, 0, 0);
-            "
-            class="mt-9"
-            >Contact Us</v-btn
-          >
+          <router-link to="/menu" class="mr-5 mt-9">
+    <v-btn
+      variant="outlined"
+      style="
+        font-size: 20px;
+        background-color: orangered;
+        color: white;
+        border-radius: 3px;
+        border-color: rgb(0, 0, 0);
+      "
+    >
+      View Menu
+    </v-btn>
+  </router-link>
+
+  <router-link to="/contact" class="mt-9">
+    <v-btn
+      variant="outlined"
+      style="
+        font-size: 20px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border-radius: 3px;
+        border-color: rgb(0, 0, 0);
+      "
+    >
+      Contact Us
+    </v-btn>
+  </router-link>
         </div>
       </div>
 
@@ -100,19 +105,26 @@
         <v-img class="menu mt-2 ml-16" src="@/assets/Ai.png" />
 
         <v-card-actions>
-          <v-btn
-            variant="outlined"
-            style="
-              background-color: rgb(255, 255, 255);
-              color: rgb(0, 0, 0);
-              border-radius: 3px;
-              border-color: rgb(0, 0, 0);
-              font-size: 17px;
-            "
-            class="mt-4"
-            >Locations</v-btn
-          >
-        </v-card-actions>
+  <a
+    href="https://www.google.com/maps/place/Ricardo's+Pizza/@45.4162209,-75.7226566,14.4z/data=!4m19!1m12!4m11!1m3!2m2!1d-75.7033854!2d45.4189044!1m6!1m2!1s0x4cce045242c0af1b:0x5f7c36d9013dc626!2s267+Bay+St,+Ottawa,+ON+K1R+5Z4!2m2!1d-75.7036905!2d45.4150912!3m5!1s0x4cce045242c0af1b:0x5f7c36d9013dc626!8m2!3d45.4150781!4d-75.7037256!16s%2Fg%2F1tfb65lc?entry=ttu"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <v-btn
+      variant="outlined"
+      style="
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border-radius: 3px;
+        border-color: rgb(0, 0, 0);
+        font-size: 17px;
+      "
+      class="mt-4"
+    >
+      Locations
+    </v-btn>
+  </a>
+</v-card-actions>
       </v-card>
     </div>
   </div>
