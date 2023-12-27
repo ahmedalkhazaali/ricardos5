@@ -45,27 +45,16 @@ const showThankYou = ref(false);
 
 const submitForm = async () => {
   try {
-    const response = await fetch('http://localhost:3000/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, message }),
-    });
+    // Simulate form submission
+    // Add your actual form submission logic here
 
-    const result = await response.json();
 
-    if (response.ok) {
-      // Display the thank you message
-      showThankYou.value = true;
-    } else {
-      console.error('Error during form submission:', result);
-    }
+    // Display the thank you message
+    showThankYou.value = true;
   } catch (error) {
     console.error('Error during form submission:', error);
   }
 };
-
 </script>
 
 
@@ -144,3 +133,29 @@ const submitForm = async () => {
   color: darkorange;
 }
 </style>
+<script setup>
+import { ref } from 'vue';
+import axios from 'axios';
+
+const name = ref('');
+const email = ref('');
+const message = ref('');
+const showThankYou = ref(false);
+
+const submitForm = async () => {
+  try {
+    const response = await axios.post('http://localhost:3000/submit-form', {
+      name: name.value,
+      email: email.value,
+      message: message.value
+    });
+
+    console.log(response.data);  // Log the response from the server
+
+    // Display the thank you message
+    showThankYou.value = true;
+  } catch (error) {
+    console.error('Error during form submission:', error);
+  }
+};
+</script>
